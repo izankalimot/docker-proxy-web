@@ -29,7 +29,7 @@ Asegúrate de tener instalado en tu sistema:
 Abre una terminal y clona este proyecto desde GitHub:
 
 ```bash
-git clone https://github.com/[TU_USUARIO]/docker-proxy-hub.git
+git clone https://github.com/izankalimot/docker-proxy-web.git
 cd docker-proxy-hub
 ```
 
