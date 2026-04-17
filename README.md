@@ -54,12 +54,20 @@ Para comprobar que el tráfico se reparte entre los dos servidores:
 2. Refresca la web (usa `Ctrl + F5` para evitar el caché del navegador).
 3. Verás en los logs cómo las peticiones se alternan entre `web1-1` y `web2-1`.
 
+Verificación:
+<img width="751" height="176" alt="image" src="https://github.com/user-attachments/assets/b21098d6-1514-424b-a2f0-fa0a1147c250" />
+
+<img width="902" height="141" alt="image" src="https://github.com/user-attachments/assets/0a848949-aef3-4097-9929-52e099ad5bca" />
+
 ### ⚡ Caché de Contenido
 Nginx está configurado para almacenar en caché las imágenes y archivos estáticos. Puedes verificarlo de dos formas:
 - **Cabeceras HTTP**: Realiza una petición con `curl.exe -I http://localhost:8080`. Busca la cabecera `X-Proxy-Cache`.
     - `MISS`: El archivo no estaba en caché y se pidió al servidor.
     - `HIT`: El archivo se sirvió instantáneamente desde el caché del proxy.
 - **Tiempos de respuesta**: Las segundas cargas de la página serán significativamente más rápidas.
+
+Verificación:
+<img width="460" height="162" alt="image" src="https://github.com/user-attachments/assets/face27ec-45db-473e-b789-567233fc0307" />
 
 ---
 
