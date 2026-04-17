@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineDocker | Cartelera Completa</title>
+    <style>
+        :root { --primary: #e50914; --dark: #0a0a0a; --card-bg: #1a1a1a; --light: #ffffff; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background: var(--dark); color: var(--light); }
+        
+        header { background: linear-gradient(to bottom, #000 0%, transparent 100%); padding: 3rem 1rem; text-align: center; }
+        h1 { color: var(--primary); font-size: 3.5rem; margin: 0; text-transform: uppercase; letter-spacing: 4px; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 4rem; }
+        
+        .movie-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.7); border: 1px solid #333; }
+        
+        /* Contenedor de la Foto */
+        .poster-container { width: 100%; height: 500px; overflow: hidden; }
+        .poster-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .movie-card:hover .poster-container img { transform: scale(1.05); }
+
+        /* Contenedor del Trailer */
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; background: #000; }
+        .video-wrapper iframe, .video-wrapper video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        
+        .info { padding: 1.5rem; border-top: 3px solid var(--primary); }
+        .info h3 { margin: 0 0 0.8rem 0; color: var(--light); font-size: 1.8rem; }
+        .info p { font-size: 1rem; color: #bbb; line-height: 1.5; margin-bottom: 0; }
+        
+        .section-title { border-left: 5px solid var(--primary); padding-left: 15px; margin: 20px 0; color: #fff; text-transform: uppercase; }
+
+        footer { text-align: center; padding: 4rem; color: #444; border-top: 1px solid #222; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CineDocker</h1>
+    <p>Infraestructura Balanceada por Izan</p>
+</header>
+
+<div class="container">
+    <div class="grid">
+        
+        <div class="movie-card">
+            <div class="poster-container">
+                <img src="images/about_time.jpg" alt="About Time Poster">
+            </div>
+            <div class="info">
+                <h3>About Time</h3>
+                <p>Una historia sobre el amor y los viajes en el tiempo.</p>
+            </div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/S2U2D6jN6RY" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <div class="poster-container">
+                <img src="images/the_hunt.jpg" alt="The Hunt Poster">
+            </div>
+            <div class="info">
+                <h3>The Hunt (Jagten)</h3>
+                <p>La tensión de una comunidad ante una acusación injusta.</p>
+            </div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/ieLIOBkMgAQ" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <div class="poster-container">
+                <img src="images/interstellar.jpg" alt="Interstellar Poster">
+            </div>
+            <div class="info">
+                <h3>Interstellar</h3>
+                <p>Ciencia ficción épica sobre el tiempo, el espacio y la humanidad.</p>
+            </div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/zSWdZVtXT7E" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <div class="poster-container">
+                <img src="images/dune2.jpg" alt="Dune 2 Poster">
+            </div>
+            <div class="info">
+                <h3>Dune: Part Two</h3>
+                <p>La continuación de la odisea de Paul Atreides en Arrakis.</p>
+            </div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/_YUzQa_1RCE" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+
+    <h2 class="section-title">Nuevos Lanzamientos (Video Local)</h2>
+    <div class="grid">
+        <div class="movie-card">
+            <div class="poster-container">
+                <img src="images/project_hail_mary.png" alt="Project Hail Mary Poster">
+            </div>
+            <div class="info">
+                <h3>Project Hail Mary</h3>
+                <p>Un astronauta despierta en una nave espacial sin recordar quién es ni cómo llegó allí.</p>
+            </div>
+            <div class="video-wrapper">
+                <video controls preload="metadata">
+                    <source src="videos/Project Hail Mary  Big Game Spot.mp4" type="video/mp4">
+                    Tu navegador no soporta el formato de video.
+                </video>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>Docker | Nginx Proxy | Balanceo web1/web2 | Caché de Imágenes Activo</p>
+</footer>
+
+</body>
+</html>
