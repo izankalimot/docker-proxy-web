@@ -30,7 +30,7 @@ Abre una terminal y clona este proyecto desde GitHub:
 
 ```bash
 git clone https://github.com/izankalimot/docker-proxy-web.git
-cd docker-proxy-hub
+cd docker-proxy-web
 ```
 
 ### 2. Desplegar los contenedores
